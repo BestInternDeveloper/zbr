@@ -1,0 +1,781 @@
+./aodv/aodv.cc:1043:     Scheduler::instance().schedule(target_, p,
+./aodv/aodv.cc:1046:     Scheduler::instance().schedule(target_, p, 0.);  // No jitter
+./aodv/aodv.cc:1051:     Scheduler::instance().schedule(target_, p, delay);
+./aodv/aodv.cc:1055:     Scheduler::instance().schedule(target_, p, 0.);
+./aodv/aodv.cc:1181: Scheduler::instance().schedule(target_, p, 0.);
+./aodv/aodv.cc:1224: Scheduler::instance().schedule(target_, p, 0.);
+./aodv/aodv.cc:1260: 	Scheduler::instance().schedule(target_, p, 0.01*Random::uniform());
+./aodv/aodv.cc:1262: 	Scheduler::instance().schedule(target_, p, 0.0);
+./aodv/aodv.cc:1303: Scheduler::instance().schedule(target_, p, 0.0);
+./aodv/aodv.h:214:        int             initialized() { return 1 && target_; }
+./sctp/sctp.cc:1397:	  target_ = spCurrInterface->opTarget;
+./sctp/sctp.cc:5683:	      target_ = spCurrInterface->opTarget;
+./gaf/gaf.cc:634:	target_->recv(p,h);
+./mac/mac-802_11.h:494:		return (cache_ && logtarget_
+./mac/mac-802_11.h:499:                logtarget_->recv(p, (Handler*) 0);
+./mac/mac-802_11.h:598:	NsObject*	logtarget_;
+./mac/mac-802_11.h:599:	NsObject*       EOTtarget_;     // given a copy of packet at TX end
+./mac/ll.h:87:		return (mac_ && uptarget_ && downtarget_);
+./mac/ll.h:98:        inline NsObject* downtarget() { return downtarget_; }
+./mac/ll.h:99:        inline NsObject* uptarget() { return uptarget_; }
+./mac/ll.h:115:	NsObject* downtarget_;		// for outgoing packet 
+./mac/ll.h:116:	NsObject* uptarget_;		// for incoming packet
+./mac/mac-tdma.h:282:    logtarget_->recv(p, (Handler*) 0);
+./mac/mac-tdma.h:315:  NsObject*	logtarget_;
+./mac/wireless-phyExt.h:217:		return (node_ && uptarget_ && downtarget_ && propagation_);
+./mac/mac-simple.cc:282:		uptarget_->recv(p, (Handler*) 0);
+./mac/mac-simple.cc:291:	downtarget_->recv(pktTx_, txHandler_);
+./mac/smac.cc:494:			logtarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./mac/smac.cc:495:			if(logtarget_ == 0)
+./mac/smac.cc:1892:		uptarget_->recv(p, (Handler*)0);
+./mac/smac.cc:1929:	downtarget_->recv(p->copy(), this);
+./mac/smac.cc:1930:	//Scheduler::instance().schedule(downtarget_, p, 0.000001);
+./mac/mac-multihop.cc:215:		Scheduler::instance().schedule(target_, p, delay_);
+./mac/mac-802_11.cc:94:	if (EOTtarget_) {
+./mac/mac-802_11.cc:120:	downtarget_->recv(p->copy(), this);	
+./mac/mac-802_11.cc:258:        EOTtarget_ = 0;
+./mac/mac-802_11.cc:268:			EOTtarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./mac/mac-802_11.cc:269:			if (EOTtarget_ == 0)
+./mac/mac-802_11.cc:294:			logtarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./mac/mac-802_11.cc:295:			if(logtarget_ == 0)
+./mac/mac-802_11.cc:800:	if (EOTtarget_) {
+./mac/mac-802_11.cc:802:		EOTtarget_->recv(eotPacket_, (Handler *) 0);
+./mac/mac-802_11.cc:2007:			uptarget_->recv(p->copy(), (Handler*) 0);
+./mac/mac-802_11.cc:2037:	uptarget_->recv(p, (Handler*) 0);
+./mac/phy.cc:84:			downtarget_ = (NsObject*) obj;
+./mac/phy.cc:134:			uptarget_->recv(p, (Handler*) 0);
+./mac/phy.cc:148:			uptarget_->recv(p, (Handler*) 0);
+./mac/phy.cc:188:		(long) uptarget_, (long) channel_);
+./mac/mac.h:220:                logtarget_->recv(p, (Handler*) 0);
+./mac/mac.h:222:        NsObject*       logtarget_;
+./mac/mac.h:227:		return (netif_ && uptarget_ && downtarget_); 
+./mac/arp.cc:249:	s.schedule(ll->downtarget_, p, delay_);
+./mac/arp.cc:302:			s.schedule(ll->downtarget_, llinfo->hold_, delay_);
+./mac/arp.cc:342:		s.schedule(ll->downtarget_, p, delay_);
+./mac/mac-802_3.cc:247:	downtarget_->recv(newp);
+./mac/mac-802_3.cc:326:		uptarget_->recv(p->copy(), (Handler*) 0);
+./mac/mac-802_3.cc:329:		uptarget_->recv(p, (Handler*) 0);
+./mac/mac-802_11Ext.h:560:		return (cache_ && logtarget_ &&Mac::initialized());
+./mac/mac-802_11Ext.h:564:		logtarget_->recv(p, (Handler*) 0);
+./mac/mac-802_11Ext.h:606:	NsObject* logtarget_;
+./mac/mac-tdma.cc:235:			logtarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./mac/mac-tdma.cc:236:			if(logtarget_ == 0)
+./mac/mac-tdma.cc:391:	uptarget_->recv(p, (Handler*) 0);
+./mac/mac-tdma.cc:457:	downtarget_->recv(pktTx_, this);        
+./mac/wired-phy.h:69:		return (node_ && uptarget_ && downtarget_ );
+./mac/wireless-phy.h:137:		return (node_ && uptarget_ && downtarget_ && propagation_);
+./mac/mac-802_11Ext.cc:129:			logtarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./mac/mac-802_11Ext.cc:130:			if (logtarget_ == 0)
+./mac/mac-802_11Ext.cc:634:	downtarget_->recv(p->copy(), this);
+./mac/mac-802_11Ext.cc:721:	uptarget_->recv(p, (Handler*) 0);
+./mac/mac.cc:121:                        logtarget_ = (NsObject*) obj;
+./mac/mac.cc:122:                        if(logtarget_ == 0)
+./mac/mac.cc:160:	Scheduler::instance().schedule(uptarget_, p, delay_);
+./mac/mac.cc:167:	downtarget_->recv(p, this);
+./mac/ll.cc:70:	downtarget_(0), uptarget_(0)
+./mac/ll.cc:99:			downtarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./mac/ll.cc:103:			uptarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./mac/ll.cc:122:			tcl.resultf("%s", downtarget_->name());
+./mac/ll.cc:126:			tcl.resultf("%s", uptarget_->name());
+./mac/ll.cc:158:			uptarget_ ? sendUp(p) : drop(p);
+./mac/ll.cc:228:		s.schedule(downtarget_, p, delay_);
+./mac/ll.cc:241:		s.schedule(uptarget_, p, delay_);
+./mac/wireless-phyExt.cc:184:	downtarget_->recv(p, this);
+./mac/wireless-phyExt.cc:341:	Mac802_11Ext * mac_ = (Mac802_11Ext*)(uptarget_);
+./mac/wireless-phyExt.cc:350:	Mac802_11Ext * mac_ = (Mac802_11Ext*)(uptarget_);
+./mac/wireless-phyExt.cc:378:	Mac802_11Ext * myUpMAC = (Mac802_11Ext*)(uptarget_);
+./mac/wireless-phyExt.cc:383:	Mac802_11Ext * myUpMAC = (Mac802_11Ext*)(uptarget_);
+./mac/wireless-phyExt.cc:388:	Mac802_11Ext * myUpMAC = (Mac802_11Ext*)(uptarget_);
+./mac/smac.h:564:    logtarget_->recv(p, (Handler*) 0);
+./mac/smac.h:595:  NsObject*       logtarget_;
+./mac/smac.h:697:    return (netif_ && uptarget_ && downtarget_); 
+./tools/flowmon.h:85:	TaggerTBFlow() : target_rate_(0.0), time_last_sent_(0.0),
+./tools/flowmon.h:88:		bind_bw("target_rate_", &target_rate_);
+./tools/flowmon.h:99:            tbucket_ += time_elapsed * target_rate_ / 8.0;
+./tools/flowmon.h:116:	double	target_rate_;		//predefined flow rate in bytes/sec
+./tools/flowmon.h:133:	TaggerTSWFlow() : target_rate_(0.0), avg_rate_(0.0), 
+./tools/flowmon.h:136:		bind_bw("target_rate_", &target_rate_);
+./tools/flowmon.h:152:	double	target_rate_;		//predefined flow rate in bytes/sec
+Binary file ./tools/flowmon.o matches
+./tools/flowmon.cc:57:        if (avg_rate_ <= target_rate_) {
+./tools/flowmon.cc:62:               prob = (avg_rate_ - target_rate_) / avg_rate_;
+./puma/puma.h:275:		Trace*             logTarget_;           // For logging
+./puma/puma.cc:467:	logTarget_           = NULL;
+./puma/puma.cc:488:                logTarget_ = (Trace*)TclObject::lookup(argv[2]);
+./puma/puma.cc:489:                if (logTarget_ == NULL)
+./puma/puma.cc:672:        Scheduler::instance().schedule(target_, p,
+./puma/puma.cc:818:            Scheduler::instance().schedule(target_, p,
+./puma/puma.cc:892:            Scheduler::instance().schedule(target_, p,
+./puma/puma.cc:945:        Scheduler::instance().schedule(target_, p,
+./puma/puma.cc:1085:            Scheduler::instance().schedule(target_, p,
+./sensor-nets/landmark.h:434:  Trace *tracetarget_;  // Trace target
+./sensor-nets/landmark.cc:166:  if (!tracetarget_)
+./sensor-nets/landmark.cc:172:  vsprintf (tracetarget_->buffer (), fmt, ap); 
+./sensor-nets/landmark.cc:173:  tracetarget_->dump ();
+./sensor-nets/landmark.cc:897:      s.schedule(target_,newp,0);
+./sensor-nets/landmark.cc:971:	s.schedule(target_, newp, 0);
+./sensor-nets/landmark.cc:994:	s.schedule(target_,newp,0);
+./sensor-nets/landmark.cc:1058:  s.schedule(target_, p, 0);
+./sensor-nets/landmark.cc:1271:    s.schedule(target_, p, 0);
+./sensor-nets/landmark.cc:1400:	    s.schedule(target_,newp,0);
+./sensor-nets/landmark.cc:1431:	  s.schedule(target_,p,0);
+./sensor-nets/landmark.cc:1441:      s.schedule(target_, p, 0);
+./sensor-nets/landmark.cc:1948:	   s.schedule(a_->target_,p,0);
+./sensor-nets/landmark.cc:1993:	      s.schedule(a_->target_,newp,0);
+./sensor-nets/landmark.cc:1998:	  s.schedule(a_->target_, p, 0);
+./sensor-nets/landmark.cc:2293:	  tracetarget_ = (Trace *) obj;
+./sensor-nets/landmark.cc:3143:	  s.schedule(target_,p,0);
+./sensor-nets/landmark.cc:3203:	    s.schedule(target_,newp,0);
+./sensor-nets/landmark.cc:3216:	  s.schedule(target_,p,0);
+./sensor-nets/landmark.cc:3244:      s.schedule(target_,p,0);
+./sensor-nets/landmark.cc:3299:	s.schedule(target_,p,0);      
+./sensor-nets/landmark.cc:3309:      s.schedule(target_,p,0);
+./sensor-nets/landmark.cc:3698:    s.schedule(target_,newp,0);
+./sensor-nets/landmark.cc:3757:      s.schedule(target_,newp,0);
+./sensor-nets/flood-agent.h:61:  Trace *tracetarget_;  // Trace target
+./sensor-nets/sensor-query.cc:78:  if (!tracetarget_)
+./sensor-nets/sensor-query.cc:84:  vsprintf (tracetarget_->buffer (), fmt, ap); 
+./sensor-nets/sensor-query.cc:85:  tracetarget_->dump ();
+./sensor-nets/sensor-query.cc:141:          tracetarget_ = (Trace *) obj;
+./sensor-nets/sensor-query.cc:285:  s.schedule(target_,p,0);
+./sensor-nets/flood-agent.cc:58:  if (!tracetarget_)
+./sensor-nets/flood-agent.cc:64:  vsprintf (tracetarget_->buffer (), fmt, ap); 
+./sensor-nets/flood-agent.cc:65:  tracetarget_->dump ();
+./sensor-nets/flood-agent.cc:136:          tracetarget_ = (Trace *) obj;
+./sensor-nets/flood-agent.cc:361:      s.schedule(target_,p,0);
+./sensor-nets/flood-agent.cc:376:      s.schedule(target_,p,0);
+./sensor-nets/flood-agent.cc:422:    s.schedule(target_,p,0);
+./sensor-nets/tags.h:114:  Trace *tracetarget_;       // Trace target
+./sensor-nets/tags.cc:42:  if (!tracetarget_)
+./sensor-nets/tags.cc:48:  vsprintf (tracetarget_->buffer (), fmt, ap); 
+./sensor-nets/tags.cc:49:  tracetarget_->dump ();
+./sensor-nets/tags.cc:88:          tracetarget_ = (Trace *) obj;
+./sensor-nets/sensor-query.h:29:  Trace *tracetarget_;
+./simple/simple.h:21:	Trace *logtarget_;
+./simple/simple.cc:67:	Scheduler::instance().schedule(target_,p,JITTER);
+./simple/simple.cc:95:		Scheduler::instance().schedule(target_,p,0.0);
+./simple/simple.cc:118:			if(logtarget_!=0){
+./simple/simple.cc:119:				sprintf(logtarget_->pt_->buffer(),"P%f _%d_ Routing Table",
+./simple/simple.cc:122:				logtarget_->pt_->dump();
+./simple/simple.cc:123:				rtable_.print(logtarget_);
+./simple/simple.cc:143:			logtarget_=(Trace*)TclObject::lookup(argv[2]);
+./simple/simple.cc:144:			if(logtarget_==0)
+./common/connector.h:48:	inline NsObject* target() { return target_; }
+./common/connector.h:49:	void target (NsObject *target) { target_ = target; }
+./common/connector.h:56:	inline void send(Packet* p, Handler* h) { target_->recv(p, h); }
+./common/connector.h:58:	NsObject* target_;
+./common/mobilenode.h:213:		return (T_ && log_target_ &&
+./common/mobilenode.h:234:	Trace* log_target_;
+./common/agent.h:84:	void send(Packet* p, Handler* h) { target_->recv(p, h); }
+./common/bi-connector.cc:47:BiConnector::BiConnector() : uptarget_(0), downtarget_(0), drop_(0)
+./common/bi-connector.cc:57:			if (uptarget_ != 0)
+./common/bi-connector.cc:58:				tcl.result(uptarget_->name());
+./common/bi-connector.cc:62:			if (downtarget_ != 0)
+./common/bi-connector.cc:63:				tcl.result(downtarget_->name());
+./common/bi-connector.cc:85:				uptarget_ = 0;
+./common/bi-connector.cc:88:			uptarget_ = (NsObject*) obj;
+./common/bi-connector.cc:89:			if (uptarget_ == 0) {
+./common/bi-connector.cc:97:				downtarget_ = 0;
+./common/bi-connector.cc:100:			downtarget_ = (NsObject*) obj;
+./common/bi-connector.cc:101:			if (downtarget_ == 0) {
+./common/tp.cc:56:  target_->recv(p);
+./common/connector.cc:51:Connector::Connector() : target_(0), drop_(0)
+./common/connector.cc:62:			if (target_ != 0)
+./common/connector.cc:63:				tcl.result(target_->name());
+./common/connector.cc:79:				target_ = 0;
+./common/connector.cc:82:			target_ = (NsObject*)TclObject::lookup(argv[2]);
+./common/connector.cc:83:			if (target_ == 0) {
+./common/Encapsulator.h:61:	NsObject* d_target_;
+./common/bi-connector.h:48:	inline NsObject* uptarget() { return uptarget_; }
+./common/bi-connector.h:49:	NsObject* downtarget() { return downtarget_; }
+./common/bi-connector.h:56:		{ downtarget_->recv(p, h); }
+./common/bi-connector.h:58:		{ uptarget_->recv(p, h); }
+./common/bi-connector.h:60:	NsObject* uptarget_;    // upstream target -->previously 
+./common/bi-connector.h:61:	// defined as target_ for connector objects then supporting 
+./common/bi-connector.h:63:	NsObject* downtarget_;  // downstream target
+./common/Encapsulator.cc:64:	d_target_(0)
+./common/Encapsulator.cc:75:			if (d_target_ != 0) tcl.result(d_target_->name());
+./common/Encapsulator.cc:81:			d_target_ = (NsObject*)TclObject::lookup(argv[2]);
+./common/Encapsulator.cc:92:	if (d_target_) {
+./common/Encapsulator.cc:94:		d_target_->recv(copy_p, h);
+./common/mobilenode.cc:129:	log_target_ = 0;
+./common/mobilenode.cc:259:			log_target_ = (Trace*) TclObject::lookup(argv[2]);
+./common/mobilenode.cc:260:			if (log_target_ == 0)
+./common/mobilenode.cc:333:        if (!log_target_) 
+./common/mobilenode.cc:337:	sprintf(log_target_->pt_->buffer(),
+./common/mobilenode.cc:340:	log_target_->pt_->dump();
+./common/mobilenode.cc:347:	if (!log_target_) 
+./common/mobilenode.cc:351:		sprintf(log_target_->pt_->buffer(),"N -t %f -n %d -e %f", s.clock(),
+./common/mobilenode.cc:354:		sprintf(log_target_->pt_->buffer(),"N -t %f -n %d -e 0 ", s.clock(),
+./common/mobilenode.cc:357:	log_target_->pt_->dump();
+./common/ns-process.h:117:	Process() : target_(0) {}
+./common/ns-process.h:118:	inline Process*& target() { return target_; }
+./common/ns-process.h:128:		if (target_)
+./common/ns-process.h:129:			target_->process_data(size, data);
+./common/ns-process.h:134:	Process* target_;
+./common/ivs.cc:235:	target_->recv(pkt, (Handler *)0);
+./common/ivs.cc:475:			target_->recv(pkt, (Handler*)0);
+./common/messpass.cc:55:	target_->recv(p);
+./common/messpass.cc:87:	target_->recv(p);
+./tcp/ack-recons.cc:186:		target_->recv(p); /* maybe do acksfirst for this ack? */
+./tcp/snoop.cc:141:				recvtarget_ = parent_->uptarget();
+./tcp/snoop.cc:249:		s.schedule(recvtarget_, e, parent_->delay());
+./tcp/saack.cc:97:		target_->recv(newp);
+./tcp/rtcp.cc:121:	target_->recv(p);
+./tcp/snoop.h:152:	NsObject* recvtarget_;	/* where packet is passed up the stack */
+./tcp/linux/src/tcp_veno.c:138:		u32 rtt, target_cwnd;
+./tcp/linux/src/tcp_veno.c:146:		target_cwnd = ((tp->snd_cwnd * veno->basertt)
+./tcp/linux/src/tcp_veno.c:149:		veno->diff = (tp->snd_cwnd << V_PARAM_SHIFT) - target_cwnd;
+./tcp/linux/src/tcp_vegas.c:234:			u32 rtt, target_cwnd, diff;
+./tcp/linux/src/tcp_vegas.c:257:			target_cwnd = ((old_wnd * vegas->baseRTT)
+./tcp/linux/src/tcp_vegas.c:268:			diff = (old_wnd << V_PARAM_SHIFT) - target_cwnd;
+./tcp/linux/src/tcp_vegas.c:286:							   (target_cwnd >>
+./tcp/linux/src/tcp_compound.c:331:			u32 rtt, target_cwnd, diff;
+./tcp/linux/src/tcp_compound.c:359:			target_cwnd = ((old_wnd * brtt)
+./tcp/linux/src/tcp_compound.c:371:			diff = (old_wnd << V_PARAM_SHIFT) - target_cwnd;
+./dsr/sr_forwarder.h:69:routing header it forwards the packets into target_ according to the
+./dsr/sr_forwarder.h:81:  NsObject* target_;		/* where to send forwarded pkts */
+./dsr/dsragent.cc:368:  target_ = 0;
+./dsr/dsragent.cc:613:      target_->recv(packet, (Handler*)0);
+./dsr/dsragent.cc:795:  target_->recv(p.pkt, (Handler*)0);
+./dsr/sr_forwarder.cc:86:  target_ = 0;
+./dsr/sr_forwarder.cc:105:	if (target_ != 0)
+./dsr/sr_forwarder.cc:106:	  tcl.result(target_->name());
+./dsr/sr_forwarder.cc:137:	  target_ = (NsObject*) obj;
+./dsr/sr_forwarder.cc:204:      target_->recv(p, (Handler*)0);
+./dsr/sr_forwarder.cc:221:  target_->recv(p, (Handler*)0);
+./tora/tora.cc:215:	  Scheduler::instance().schedule(target_, p, delay);
+./tora/tora_io.cc:151:	target_->recv(p, (Handler*) 0);
+./gen/ns_tcl.cc:939:set target_node $args\n\
+./gen/ns_tcl.cc:941:set dst [$target_node set address_]\n\
+./gen/ns_tcl.cc:944:set link [$ns link [$self node] $target_node]\n\
+./gen/ns_tcl.cc:6570:$self instvar BcastTarget_\n\
+./gen/ns_tcl.cc:6571:set BcastTarget_ [new Classifier/Replicator]\n\
+./gen/ns_tcl.cc:6572:$self bcast-target $BcastTarget_\n\
+./gen/ns_tcl.cc:6657:$self instvar BcastTarget_\n\
+./gen/ns_tcl.cc:6658:$BcastTarget_ installNext [$ll head]\n\
+./gen/ns_tcl.cc:6666:$self instvar BcastTarget_\n\
+./gen/ns_tcl.cc:6667:set BcastTarget_ [new Classifier/Replicator]\n\
+./gen/ns_tcl.cc:6668:$self bcast-target $BcastTarget_\n\
+./gen/ns_tcl.cc:6704:$self instvar BcastTarget_\n\
+./gen/ns_tcl.cc:6705:$BcastTarget_ installNext [$ll head]\n\
+./gen/ns_tcl.cc:18957:Queue/RED/PD set global_target_ false\n\
+./gen/ns_tcl.cc:19083:QueueMonitor/ED/Flow/TB set target_rate_ 128000 \n\
+./gen/ns_tcl.cc:19086:QueueMonitor/ED/Flow/TSW set target_rate_ 0\n\
+./gen/ns_tcl.cc:22345:$fdesc set target_rate_ $rate\n\
+Binary file ./gen/ns_tcl.o matches
+./config.guess:468:	    if [ ${TARGET_BINARY_INTERFACE}x = m88kdguxelfx ] || \
+./config.guess:469:	       [ ${TARGET_BINARY_INTERFACE}x = x ]
+Binary file ./ns matches
+./pgm/pgm-agent.cc:389:    target_->recv(pkt);
+./mcast/lms-sender.cc:172:	target_->recv(p);
+./mcast/lms-sender.cc:211:	target_->recv(p);
+./mcast/lms-sender.cc:342:	target_->recv(p);
+./mcast/lms-sender.cc:420:        target_->recv(p);
+./mcast/lms-sender.cc:441:	target_->recv(p);
+./mcast/lms-receiver.cc:258:	target_->recv(p);
+./mcast/lms-receiver.cc:290:	target_->recv(p);
+./mcast/lms-receiver.cc:522:	target_->recv(p);
+./mcast/srm.cc:191:		target_->recv(p, h);
+./mcast/srm.cc:258:	target_->recv(p);
+./mcast/srm.cc:274:	target_->recv(p);
+./mcast/srm.cc:343:	target_->recv(p, (Handler*)NULL);
+./mcast/lms-agent.cc:179:		target_->recv (pkt);
+./mcast/lms-agent.cc:226:				target_->recv (pkt);
+./mcast/lms-agent.cc:401:                 target_->recv (pkt);
+./mcast/lms-agent.cc:438:                 target_->recv (pkt);
+./mcast/lms-agent.cc:533:	target_->recv(p);
+./mcast/lms-agent.cc:551:    target_->recv(p);
+./mcast/srm-ssm.cc:209:    target_->recv(p, h);
+./mcast/srm-ssm.cc:266:  target_->recv(p, (Handler*)NULL);
+./mcast/srm-ssm.cc:346:        target_->recv(p, (Handler*)NULL);
+./mcast/srm-ssm.cc:403:        target_->recv(p, (Handler*)NULL);
+./mcast/srm-ssm.cc:463:        target_->recv(p, (Handler*)NULL);
+./mcast/ctrMcast.cc:127:	target_->recv(p);
+./mcast/ctrMcast.cc:139:	target_->recv(p);
+./apps/rtp.cc:107:                        target_->recv(p);
+./apps/rtp.cc:114:                        target_->recv(p);
+./apps/rtp.cc:218:	target_->recv(p, (Handler*)0);
+./apps/udp.cc:107:		target_->recv(p);
+./apps/udp.cc:122:		target_->recv(p);
+./diffusion3/lib/nr/nr.hh:116:    TARGET_KEY = 2005,            // STRING_TYPE
+./diffusion3/lib/nr/nr.hh:117:    TARGET_RANGE_KEY = 2006,      // FLOAT_TYPE
+./diffusion3/lib/nr/nr.hh:127:    RMST_TARGET_KEY = 2016        // STRING_TYPE Type of Rmst Data
+./diffusion3/lib/nr/nr.cc:82:NRSimpleAttributeFactory<char *> RmstTargetAttr(NRAttribute::RMST_TARGET_KEY,
+./diffusion3/ns/diffrtg.cc:233:			target_ = (LL*)obj;
+./diffusion3/ns/diffrtg.cc:237:			tracetarget_ = (Trace *)obj;
+./diffusion3/ns/diffrtg.cc:247:	if (!tracetarget_)
+./diffusion3/ns/diffrtg.cc:251:	vsprintf (tracetarget_->pt_->buffer (), fmt, ap);
+./diffusion3/ns/diffrtg.cc:252:	tracetarget_->pt_->dump ();
+./diffusion3/ns/diffrtg.h:126:	Trace *tracetarget_;
+./diffusion3/ns/diffagent.cc:175:  (void)Scheduler::instance().schedule(target_, p, 0.000001);
+./diffusion3/apps/rmst_examples/rmst_source.cc:96:  NRSimpleAttribute<char*> *rmst_target_attr = NULL;
+./diffusion3/apps/rmst_examples/rmst_source.cc:121:      rmst_target_attr = RmstTargetAttr.find(data);
+./diffusion3/apps/rmst_examples/rmst_source.cc:122:      if (rmst_target_attr){
+./diffusion3/apps/rmst_examples/rmst_source.cc:124:            rmst_target_attr->getVal());
+./diffusion3/apps/ping/ping_common.cc:45:NRSimpleAttributeFactory<char *> TargetAttr(NRAttribute::TARGET_KEY, NRAttribute::STRING_TYPE);
+./diffusion3/apps/gear_examples/gear_common.cc:45:NRSimpleAttributeFactory<char *> GearTargetAttr(NRAttribute::TARGET_KEY, NRAttribute::STRING_TYPE);
+./diffusion3/filters/gear/gear_tools.cc:64://subregion must clear to be the same as target_region...
+./diffusion3/filters/gear/gear_tools.cc:140://subregion must clear to be the same as target_region...
+./diffusion3/filters/rmst/rmst.cc:53:  target_str_ = NULL;
+./diffusion3/filters/rmst/rmst.cc:79:  if (target_str_ != NULL)
+./diffusion3/filters/rmst/rmst.cc:80:    delete(target_str_);
+./diffusion3/filters/rmst/rmst.hh:108:  char *target_str_;
+./diffusion3/filters/rmst/rmst_filter.cc:582:        rmst_ptr->target_str_ = new char[strlen(tmp_str)+1];
+./diffusion3/filters/rmst/rmst_filter.cc:583:        strcpy (rmst_ptr->target_str_, tmp_str);
+./diffusion3/filters/rmst/rmst_filter.cc:584:        DiffPrint(DEBUG_IMPORTANT, "  RmstTargetAttr = %s\n", rmst_ptr->target_str_);
+./diffusion3/filters/rmst/rmst_filter.cc:1182:            rmst_ptr->target_str_));
+./diffusion3/filters/rmst/rmst_filter.cc:1271:        data_attrs.push_back(RmstTargetAttr.make(NRAttribute::IS, rmst_ptr->target_str_));
+./diffusion3/filters/rmst/rmst_filter.cc:1531:      attrs.push_back(RmstTargetAttr.make(NRAttribute::IS, rmst_ptr->target_str_));
+./diffusion3/filters/rmst/rmst_filter.cc:1618:  attrs.push_back(RmstTargetAttr.make(NRAttribute::IS, rmst_ptr->target_str_));
+Binary file ./indep-utils/model-gen/crl_to_pcap matches
+./pushback/pushback-queue.cc:212:  int lowDemand = (edv_.v_ave < edp_.th_min || qlen < 1 || getDropRate() < 0.1*TARGET_DROPRATE );
+./pushback/rate-limit-strategy.cc:41:  target_rate_ = rate;
+./pushback/rate-limit-strategy.cc:70:					   target_rate_*ptype_share_, mine, lowDemand);
+./pushback/rate-limit-strategy.cc:75:  dropped = rateLimiter_->rateLimit(p, rateEstimator_->estRate_, target_rate_, mine, lowDemand);
+./pushback/rate-limit-strategy.cc:98:	dropRate = (inRate - target_rate_)/inRate;
+./pushback/pushback.cc:324:	  qdrop, dropRate, newLimit, rls->rlStrategy_->target_rate_, rls->lowerBound_, arrRate);
+./pushback/pushback.cc:364:    double totalRate =  rls->rlStrategy_->target_rate_;
+./pushback/pushback.cc:507:  double targetRate = linkBW/(1 - TARGET_DROPRATE);
+./pushback/pushback.cc:516:      double sessionLimit = listItem->rlStrategy_->target_rate_;
+./pushback/pushback.cc:576:	  double oldLimit = listItem->rlStrategy_->target_rate_;
+./pushback/pushback.cc:843:  double totalRate =  rls->rlStrategy_->target_rate_;
+./pushback/pushback-constants.h:91:#define TARGET_DROPRATE 0.05  
+./pushback/rate-limit.cc:399:  rlStrategy_->target_rate_=limit;
+./pushback/rate-limit.cc:447:  double target_rate = pick4merge(session1->rlStrategy_->target_rate_,
+./pushback/rate-limit.cc:448:				   session2->rlStrategy_->target_rate_, 
+./pushback/rate-limit.cc:450:  winner->setLimit(target_rate);
+./pushback/ident-tree.cc:163:  double targetRate = linkBW/(1 - TARGET_DROPRATE);
+./pushback/rate-limit-strategy.h:58:  double target_rate_;          //predefined flow rate in bps 
+./diffusion/flooding.cc:98:  target_ = 0;
+./diffusion/omni_mcast.cc:214:  target_ = 0;
+./diffusion/diffusion.cc:192:  target_ = 0;
+./tcl/lib/ns-mip.tcl:153:	# if mobilenode, donot use bcasttarget; use target_ instead;
+./tcl/lib/ns-mip.tcl:156:		$self instvar BcastTarget_
+./tcl/lib/ns-mip.tcl:157:		set BcastTarget_ [new Classifier/Replicator]
+./tcl/lib/ns-mip.tcl:158:		$self bcast-target $BcastTarget_
+./tcl/lib/ns-mip.tcl:245:	$self instvar BcastTarget_
+./tcl/lib/ns-mip.tcl:246:	$BcastTarget_ installNext [$ll head]
+./tcl/lib/ns-mip.tcl:251:	# if mobilenode, donot use bcasttarget; use target_ instead;
+./tcl/lib/ns-mip.tcl:255:		$self instvar BcastTarget_
+./tcl/lib/ns-mip.tcl:256:		set BcastTarget_ [new Classifier/Replicator]
+./tcl/lib/ns-mip.tcl:257:		$self bcast-target $BcastTarget_
+./tcl/lib/ns-mip.tcl:294:	$self instvar BcastTarget_
+./tcl/lib/ns-mip.tcl:295:	$BcastTarget_ installNext [$ll head]
+./tcl/lib/ns-default.tcl:207:Queue/RED/PD set global_target_ false
+./tcl/lib/ns-default.tcl:342:QueueMonitor/ED/Flow/TB set target_rate_ 128000 
+./tcl/lib/ns-default.tcl:345:QueueMonitor/ED/Flow/TSW set target_rate_ 0
+./tcl/lib/ns-lib.tcl:2026:                $fdesc set target_rate_ $rate
+./tcl/lib/ns-rtmodule.tcl:273:	set target_node $args
+./tcl/lib/ns-rtmodule.tcl:275:		set dst [$target_node set address_]
+./tcl/lib/ns-rtmodule.tcl:278:	set link [$ns link [$self node] $target_node]
+./tcl/ex/red-pd/red-pd.tcl:14:set target_rtt_ 0.040
+./tcl/ex/red-pd/red-pd.tcl:335:				global target_rtt_
+./tcl/ex/red-pd/red-pd.tcl:336:				set target_rtt_ $value
+./tcl/ex/red-pd/helper.tcl:72:	global target_rtt_ 
+./tcl/ex/red-pd/helper.tcl:73:	set TargetRTT_ $target_rtt_
+./tcl/ex/red-pd/topology.tcl:62:    #	$redpdq_ set global_target_ true
+./tcl/ex/red-pd/topology.tcl:253:    global traf_para1_ traf_para2_ target_rtt_
+./tcl/ex/red-pd/topology.tcl:254:#    puts "Topology parametsrs: $target_rtt_ ftype=$traf_para1_ gamma=$traf_para2_" 
+./tcl/ex/red-pd/topology.tcl:257:	    set delay [expr ($target_rtt_/(2*$traf_para2_))*1000]
+./tcl/ex/red-pd/monitoring.tcl:284:    $self instvar target_drop_rate_ 
+./tcl/ex/red-pd/traffic.tcl:183:    global traf_para1_ target_rtt_ traf_para2_
+./tcl/ex/red-pd/traffic.tcl:196:	    set frp [expr sqrt(1.5)/($target_rtt_*sqrt($p))]
+./tcl/ex/red-pd/traffic.tcl:392:    global target_rtt_ traf_para1_ traf_para2_    
+./tcl/ex/red-pd/traffic.tcl:401:	    set frp [expr sqrt(1.5)/($target_rtt_*sqrt($p))]
+./tcl/ex/red-pd/traffic.tcl:423:    global target_rtt_
+./tcl/ex/red-pd/traffic.tcl:425:    set frp [expr sqrt(1.5)/($target_rtt_*sqrt($p))]
+./tcl/test/test-suite-red-pd.tcl:76:set target_rtt_ 0.040
+./tcl/test/test-suite-rio.tcl:347:    #target_rate_ (fill rate, in Bps), 
+./tcl/mobility/dsdv.tcl:96:    ##$ragent set target_ [$node set ifq_(0)]	;# ifq between LL and MAC
+./tcl/lan/ns-ll.tcl:97:	# make snoop's llsnoop_ ourself, and make it's recvtarget_ same as ours
+./mobile/god.h:132:                return num_nodes && min_hops && uptarget_;
+./mobile/mip-reg.cc:111:  bcast_target_(0), ragent_(0), timer_(this), adlftm_(~0)
+./mobile/mip-reg.cc:212:			bcast_target_ = (NsObject *)TclObject::lookup(argv[2]);
+./mobile/mip-reg.cc:243:	  if (bcast_target_) bcast_target_->recv(p, (Handler*) 0);
+./mobile/mip-reg.cc:244:	  else if (target_) target_->recv(p, (Handler*) 0);
+./mobile/mip-reg.cc:274:	beacon_(1.0),bcast_target_(0),agts_(0),rtx_timer_(this), 
+./mobile/mip-reg.cc:390:			bcast_target_ = (NsObject *)TclObject::lookup(argv[2]);
+./mobile/mip-reg.cc:451:	if (bcast_target_) 
+./mobile/mip-reg.cc:452:		bcast_target_->recv(p, (Handler*) 0);
+./mobile/mip-reg.cc:453:	else if (target_) 
+./mobile/mip-reg.cc:454:		target_->recv(p, (Handler*) 0);
+./mobile/dumb-agent.cc:75:      tracetarget_ = (Trace *)TclObject::lookup (argv[2]);
+./mobile/dumb-agent.cc:76:      if (tracetarget_ == 0) {
+./mobile/dumb-agent.cc:108:    target_->recv(p, (Handler*)0);
+./mobile/dumb-agent.cc:118:  if (!tracetarget_)
+./mobile/dumb-agent.cc:122:  vsprintf (tracetarget_->pt_->buffer (), fmt, ap);
+./mobile/dumb-agent.cc:123:  tracetarget_->pt_->dump ();
+./mobile/mip.h:160:	NsObject *bcast_target_; /* where to send out ads */
+./mobile/mip.h:202:	NsObject *bcast_target_; /* where to send out solicitations */
+./mobile/dumb-agent.h:68:  Trace *tracetarget_;
+./mobile/mip.cc:105:	target_->recv(p,h);
+./trace/trace-ip.cc:93:	target_ ? send(p, h) : Packet::free(p);
+./trace/trace-ip.cc:114:	target_ ? send(p, h) : Packet::free(p);
+./trace/trace.cc:434:	if (target_ == 0)
+./trace/trace.cc:446:	target_->recvOnly(p);
+./trace/trace.cc:602:	if (target_ == 0)
+./trace/cmu-trace.cc:1644:	if(target_ == 0)
+./src_rtg/sragent.cc:105:		target_ = (NsObject *) TclObject::lookup(argv[2]);
+./src_rtg/sragent.cc:106:		if (target_ == 0) {
+./linkstate/rtProtoLS.cc:171:        target_->recv(p);               
+./linkstate/rtProtoLS.cc:336:	target_->recv(p);           
+./link/hackloss.cc:70:		target_->recv(p, h);
+./link/dynalink.cc:94:		target_->recv(p, h);
+./link/delay.cc:100: 			s.schedule(target_, p, latest_time_ - now_ );
+./link/delay.cc:103: 			s.schedule(target_, p, txt + delay_);
+./link/delay.cc:107:		s.schedule(target_, p, txt + delay_);
+./link/delay.cc:114:	target_->recv(p, (Handler*) NULL);
+./emulate/tcptap.cc:434:  target_->recv(nspacket);
+./emulate/tcptap.cc:444: * FullTcp packet and injects it into the simulator by calling target_->recv
+./emulate/ping_responder.cc:122:	target_->recv(pkt);
+./emulate/iptap.cc:184:  target_->recv(p);
+./emulate/iptap.cc:194: * ttl value and inject it into the simulator by calling target_->recv
+./emulate/tap.cc:189:		Scheduler::instance().schedule(target_, p, when);
+./emulate/tap.cc:192:			now(), name(), target_->name());
+./emulate/tap.cc:194:		target_->recv(p);
+./dsdv/dsdv.cc:197:      s.schedule (a->target_, p, jitter(DSDV_BROADCAST_JITTER, a->be_random_));
+./dsdv/dsdv.cc:277:	      s.schedule (target_, p, jitter(DSDV_BROADCAST_JITTER, be_random_));
+./dsdv/dsdv.cc:389:  while (p2 = ((PriQueue *) target_)->filter (prte->dst))
+./dsdv/dsdv.cc:985:  target_->recv(p, (Handler *)0);
+./dsdv/dsdv.cc:995:  s.schedule (target_, p, jitter(DSDV_BROADCAST_JITTER, be_random_));
+./configure:657:target_os
+./configure:658:target_vendor
+./configure:659:target_cpu
+./configure:679:target_alias
+./configure:741:target_alias
+./configure:1076:    ac_prev=target_alias ;;
+./configure:1078:    target_alias=$ac_optarg ;;
+./configure:1155:    : "${build_alias=$ac_option} ${host_alias=$ac_option} ${target_alias=$ac_option}"
+./configure:1200:target=$target_alias
+./configure:3883:  if test "x$target_alias" = x; then
+./configure:3886:  ac_cv_target=`$SHELL "$ac_aux_dir/config.sub" $target_alias` ||
+./configure:3887:    as_fn_error $? "$SHELL $ac_aux_dir/config.sub $target_alias failed" "$LINENO" 5
+./configure:3901:target_cpu=$1
+./configure:3902:target_vendor=$2
+./configure:3906:target_os=$*
+./configure:3908:case $target_os in *\ *) target_os=`echo "$target_os" | sed 's/ /-/g'`;; esac
+./configure:3913:test -n "$target_alias" &&
+./configure:3916:  program_prefix=${target_alias}-
+./configure:5138:if test `echo "$target_os" | sed 's/\..*//'` = solaris2 ; then
+./configure:6917:	if test "$target_os" = irix5.3 ; then
+./configure:9330:V_TAR_TARGET=$target_os
+./conf/configure.in.head:114:if test `echo "$target_os" | sed 's/\..*//'` = solaris2 ; then
+./conf/configure.in.misc:25:	if test "$target_os" = irix5.3 ; then
+./conf/configure.in.tail:127:V_TAR_TARGET=$target_os
+./conf/configure.in.video:147:	if test "$target_os" = ultrix4.3 ; then
+./zbr/zbr.cc:1483:	   Scheduler::instance().schedule(target_, p,
+./zbr/zbr.cc:1488:	     Scheduler::instance().schedule(target_, p, delay);
+./zbr/zbr.cc:1494:	     Scheduler::instance().schedule(target_, p, 0.);
+./zbr/zbr.cc:1523:	Scheduler::instance().schedule(target_, p, 0.);	//delay=0
+./zbr/zbr.cc:1665:	Scheduler::instance().schedule(target_, p, 0.);
+./zbr/zbr.cc:1742:	Scheduler::instance().schedule(target_, p, 0.0003);
+./zbr/zbr.h:242:        int             initialized() { return 1 && target_; }
+Binary file ./zbr/NS2添加协议步骤.doc matches
+./satellite/sat-hdlc.cc:541:	s.schedule(downtarget_, p, delay_);
+./satellite/sat-hdlc.cc:950:				uptarget_ ? sendUp(p) : drop(p);
+./satellite/sat-hdlc.cc:975:// 			uptarget_ ? sendUp(p) : drop(p);
+./satellite/sat-hdlc.cc:1149:		uptarget_ ? sendUp(p) : drop(p);
+./satellite/sat-hdlc.cc:1268:			uptarget_ ? sendUp(rpkt) : drop(rpkt);
+./satellite/satlink.cc:169:		uptarget_ ? sendUp(p) : drop(p);
+./satellite/satlink.cc:297:	s.schedule(downtarget_, p, delay_);
+./satellite/satlink.cc:306:		s.schedule(uptarget_, p, delay_);
+./satellite/satlink.cc:391:	Scheduler::instance().schedule(uptarget_, p, delay_ + mh->txtime());
+./satellite/satlink.cc:410:	downtarget_->recv(p, this);
+./satellite/satlink.cc:525:	downtarget_->recv(p, this);
+./satellite/satlink.cc:563:		Scheduler::instance().schedule(uptarget_, p, delay_);
+./satellite/satlink.cc:653:		uptarget_->recv(p, (Handler*) 0);
+./satellite/sattrace.cc:544:	if (target_ == 0)
+Binary file ./nstk matches
+./aomdv/aomdv.h:354:        int             initialized() { return 1 && target_; }
+./aomdv/aomdv.cc:1215://   Scheduler::instance().schedule(target_, p, 0.);
+./aomdv/aomdv.cc:1262:													//      Scheduler::instance().schedule(target_, p, 0.);
+./aomdv/aomdv.cc:1396:		Scheduler::instance().schedule(target_, p,
+./aomdv/aomdv.cc:1401:			Scheduler::instance().schedule(target_, p, delay);
+./aomdv/aomdv.cc:1405:			Scheduler::instance().schedule(target_, p, 0.);
+./aomdv/aomdv.cc:1531:	Scheduler::instance().schedule(target_, p, 0.);
+./aomdv/aomdv.cc:1579:	Scheduler::instance().schedule(target_, p, 0.);
+./aomdv/aomdv.cc:1618:		Scheduler::instance().schedule(target_, p, 0.01*Random::uniform());
+./aomdv/aomdv.cc:1620:		Scheduler::instance().schedule(target_, p, 0.0);
+./aomdv/aomdv.cc:1662:	Scheduler::instance().schedule(target_, p, 0.0);
+./aomdv/aomdv.cc:1844:		Scheduler::instance().schedule(target_, p,
+./aomdv/aomdv.cc:1849:			Scheduler::instance().schedule(target_, p, delay);
+./aomdv/aomdv.cc:1853:			Scheduler::instance().schedule(target_, p, 0.);
+./imep/imep.h:240:		return recvtarget_ && sendtarget_ && rtagent_ && logtarget_;
+./imep/imep.h:265:	NsObject	*recvtarget_;
+./imep/imep.h:268:	NsObject	*sendtarget_;
+./imep/imep.h:274:	Trace		*logtarget_;
+./imep/imep.cc:99:	recvtarget_ = sendtarget_ = 0;
+./imep/imep.cc:100:	logtarget_ = 0;
+./imep/imep.cc:120:			recvtarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./imep/imep.cc:121:                        assert(recvtarget_);
+./imep/imep.cc:125:			sendtarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./imep/imep.cc:126:                        assert(sendtarget_);
+./imep/imep.cc:135:			logtarget_ = (Trace*) TclObject::lookup(argv[2]);
+./imep/imep.cc:136:			assert(logtarget_);
+./imep/imep.cc:949:	recvtarget_->recv(p, (Handler*) 0);
+./imep/imep.cc:966: 	sendtarget_->recv(p, (Handler*) 0);
+./imep/imep.cc:996:        sprintf(logtarget_->pt_->buffer(),
+./imep/imep.cc:1000:	  offset = strlen(logtarget_->pt_->buffer());
+./imep/imep.cc:1001:	  sprintf(logtarget_->pt_->buffer() + offset,
+./imep/imep.cc:1007:        logtarget_->pt_->dump();
+./imep/imep.cc:1015:  if (!logtarget_) return;
+./imep/imep.cc:1018:  vsprintf(logtarget_->pt_->buffer(), fmt, ap);
+./imep/imep.cc:1019:  logtarget_->pt_->dump();
+./mdart/mdart_ndp.cc:122://	if (mdart_->logtarget_ != 0) {
+./mdart/mdart_ndp.cc:123://		sprintf(mdart_->logtarget_->pt_->buffer(), "x -t %.9f mdart sendHello srcId %d srcAdd %s dstAdd %s seqNum %d", CURRENT_TIME, sendPktRh_->srcId_, bitString(sendPktRh_->srcAdd_), bitString(sendPktRh_->dstAdd_), sendPktRh_->seqNum_);
+./mdart/mdart_ndp.cc:124://		mdart_->logtarget_->pt_->dump();
+./mdart/mdart.h:113:		return target_;
+./mdart/mdart.h:148:	Trace*			logtarget_;
+./mdart/mdart.cc:182:			if (logtarget_ != 0) {
+./mdart/mdart.cc:183:				sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart table -Hs %d -Ds %s -Rt %d", CURRENT_TIME, id_, bitString(address_), routingTable_->size());
+./mdart/mdart.cc:184:				logtarget_->pt_->dump();
+./mdart/mdart.cc:194:			if (logtarget_ != 0) {
+./mdart/mdart.cc:195:				sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart neighbor -Hs %d -Ds %s -Nd %d", CURRENT_TIME, id_, bitString(address_), ndp_->neighborDegree());
+./mdart/mdart.cc:196:				logtarget_->pt_->dump();
+./mdart/mdart.cc:206:			if (logtarget_ != 0) {
+./mdart/mdart.cc:207:				sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart realNeighbor -Hs %d -Ds %s -Nd %d", CURRENT_TIME, id_, bitString(address_), ndp_->realNeighborDegree());
+./mdart/mdart.cc:208:				logtarget_->pt_->dump();
+./mdart/mdart.cc:218:			if (logtarget_ != 0) {
+./mdart/mdart.cc:219:				sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart lookupTable -Hs %d -Ds %s", CURRENT_TIME, id_, bitString(address_));
+./mdart/mdart.cc:220:				logtarget_->pt_->dump();
+./mdart/mdart.cc:223:					sprintf(logtarget_->pt_->buffer(), "\tid\t%d\taddress\t%s", (*it).first, bitString((*it).second));
+./mdart/mdart.cc:224:					logtarget_->pt_->dump();
+./mdart/mdart.cc:233:			if (logtarget_ != 0) {
+./mdart/mdart.cc:234:				sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart dhtTable -Hs %d -Ds %s", CURRENT_TIME, id_, bitString(address_));
+./mdart/mdart.cc:235:				logtarget_->pt_->dump();
+./mdart/mdart.cc:238:					sprintf(logtarget_->pt_->buffer(), "\tid\t%d\taddress\t%s", adp_->getEntry(i)->id(), bitString(adp_->getEntry(i)->address()));
+./mdart/mdart.cc:239:					logtarget_->pt_->dump();
+./mdart/mdart.cc:248:			if (logtarget_ != 0) {
+./mdart/mdart.cc:249:				sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart dhtInfo -Hs %d -Ds %s", CURRENT_TIME, id_, bitString(address_));
+./mdart/mdart.cc:250:				logtarget_->pt_->dump();
+./mdart/mdart.cc:253:					sprintf(logtarget_->pt_->buffer(), "\tinfo idInfo %s\ttextInfo %s", (*it).first->c_str(), (*it).second->c_str());
+./mdart/mdart.cc:254:					logtarget_->pt_->dump();
+./mdart/mdart.cc:263:			if (logtarget_ != 0) {
+./mdart/mdart.cc:264:				sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart routingTable -Hs %d -Ds %s", CURRENT_TIME, id_, bitString(address_));
+./mdart/mdart.cc:265:				logtarget_->pt_->dump();
+./mdart/mdart.cc:270:					sprintf(logtarget_->pt_->buffer(), "\tlevel sibling = %i\tsibling = %s", i, tempSibling_.to_string().c_str());
+./mdart/mdart.cc:271:					logtarget_->pt_->dump();
+./mdart/mdart.cc:274:						sprintf(logtarget_->pt_->buffer(), "\t\tnextHopId = %d\tnextHopAdd = %s\thopNumber = %d\tetxMetric = %f", (*itEntry_)->nextHopId(), bitString((*itEntry_)->nextHopAdd()), (*itEntry_)->hopNumber(), (*itEntry_)->etxMetric());
+./mdart/mdart.cc:275:						logtarget_->pt_->dump();
+./mdart/mdart.cc:287:			if (logtarget_ != 0) {
+./mdart/mdart.cc:288:				sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart neighborPrint -Hs %d -Ds %s", CURRENT_TIME, id_, bitString(address_));
+./mdart/mdart.cc:289:				logtarget_->pt_->dump();
+./mdart/mdart.cc:292:					sprintf(logtarget_->pt_->buffer(), "\tneighbor id = %d\taddress = %s", (*neighbor_)->id(), bitString((*neighbor_)->address()));
+./mdart/mdart.cc:293:					logtarget_->pt_->dump();
+./mdart/mdart.cc:314:			logtarget_ = (Trace*)TclObject::lookup(argv[2]);
+./mdart/mdart.cc:315:			if (logtarget_ == 0) {
+./mdart/mdart.cc:329:			sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart node %d requestInfo %s", CURRENT_TIME, id_, idInfo.c_str());
+./mdart/mdart.cc:330:			logtarget_->pt_->dump();
+./mdart/mdart.cc:339:			sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart node %d storeInfo %s", CURRENT_TIME, id_, idInfo.c_str());
+./mdart/mdart.cc:340:			logtarget_->pt_->dump();
+./mdart/mdart.cc:559:	Scheduler::instance().schedule(target_, sendPkt_, 0.0);
+./mdart/mdart.cc:680:		if (logtarget_ != 0) {
+./mdart/mdart.cc:681:			sprintf(logtarget_->pt_->buffer(), "x -t %.9f mdart invalidAddress -Hs %d -Ds %s -Rt %d", CURRENT_TIME, id_, bitString(address_), routingTable_->size());
+./mdart/mdart.cc:682:			logtarget_->pt_->dump();
+./queue/delayer.h:77:	inline void freeTarget() {target_free = 1;}
+./queue/delayer.h:97:	int target_free;	  /* is the link free? */
+./queue/fq.cc:197:			target_->recv(p, &qh_);
+./queue/delaymodel.cc:101:	s.schedule(target_, p, txt + delay);
+Binary file ./queue/red-pd.o matches
+Binary file ./queue/delayer.o matches
+./queue/errmodel.cc:185:	if (!markecn_ && !delay_pkt_ && (h && ((error && drop_) || !target_))) {
+./queue/errmodel.cc:186:		// if we drop or there is no target_, then resume handler
+./queue/errmodel.cc:200:			Scheduler::instance().schedule(target_, p, delay_);
+./queue/errmodel.cc:208:	if (target_) {
+./queue/errmodel.cc:209:	       	target_->recv(p, h);
+./queue/fec.cc:94:		downtarget_->recv(p, h);
+./queue/fec.cc:106:		uptarget_->recv(p, h);
+./queue/queue.cc:132:			target_->recv(p, &qh_);
+./queue/queue.cc:215:		target_->recv(p, &qh_);
+./queue/priqueue.cc:131:      target_->recv(p, &qh_);
+./queue/delayer.cc:41:st_(*this), target_free(1), th_ (*this), prev_h_(NULL), pkt_(NULL) {
+./queue/delayer.cc:68:	        printf("now %f last_sent %f alloc_free %d target_free %d, spike_free %d\n", 
+./queue/delayer.cc:69:			now, last_sent, alloc_free, target_free, spike_free);
+./queue/delayer.cc:71:	if (!target_free || !alloc_free || !spike_free)
+./queue/delayer.cc:74:	if (pkt_ && target_) {
+./queue/delayer.cc:75:                target_->recv(pkt_, &th_);
+./queue/delayer.cc:77:		target_free = 0;
+./queue/dsr-priqueue.h:111:  Trace*		prq_logtarget_;	/* Used for logging */
+./queue/red-pd.cc:81:	auto_(0), global_target_(0), targetBW_(0), noMonitored_(0), 
+./queue/red-pd.cc:95:	bind_bool("global_target_", &global_target_);
+./queue/red-pd.cc:157:		//calculate drop probability - use the global target if global_target_ is set
+./queue/red-pd.cc:158:		if (global_target_) { 
+./queue/red-pd.h:54:	int global_target_;     // boolean to decide if we have the same targetBW_ 
+./queue/dsr-priqueue.cc:46:	prq_logtarget_ = 0;		// no logging target by default
+./queue/dsr-priqueue.cc:66:			prq_logtarget_ = (Trace*) TclObject::lookup(argv[2]);
+./queue/dsr-priqueue.cc:67:			assert(prq_logtarget_);
+./queue/dsr-priqueue.cc:104:		if (prq_logtarget_->pt_->tagged()) {
+./queue/dsr-priqueue.cc:137:	assert(prq_logtarget_);
+./queue/dsr-priqueue.cc:140:	vsprintf(prq_logtarget_->pt_->buffer(), fmt, ap);
+./queue/dsr-priqueue.cc:141:	prq_logtarget_->pt_->dump();
+./queue/dsr-priqueue.cc:175:                target_->recv(p, &prq_qh_);
+./queue/dsr-priqueue.cc:293:		target_->recv(p, &prq_qh_);
+./routing/rtProtoDV.cc:98:	target_->recv(p);
+./config.log:2213:ac_cv_env_target_alias_set=
+./config.log:2214:ac_cv_env_target_alias_value=
+./config.log:2396:target_alias=''
+./config.log:2397:target_cpu='x86_64'
+./config.log:2398:target_os='linux-gnu'
+./config.log:2399:target_vendor='unknown'
+./webcache/inval-agent.cc:122:	target_->process_data(size, data);
+./webcache/inval-agent.cc:131:		target_ = (Process *)c;
+./webcache/tcp-simple.cc:78:	// Simply sending out bytes out to target_
+./adc/sa.h:80:	NsObject* ctrl_target_;
+./adc/tbf.cc:100:		target_->recv(p);
+./adc/tbf.cc:140:	target_->recv(p);
+./adc/sa.cc:83:			target_ = (NsObject*)TclObject::lookup(argv[2]);
+./adc/sa.cc:84:			if (target_ == 0) {
+./adc/sa.cc:88:			ctrl_target_=target_;
+./adc/sa.cc:92:			ctrl_target_=(NsObject*)TclObject::lookup(argv[2]);
+./adc/sa.cc:93:			if (ctrl_target_ == 0) {
+./adc/sa.cc:157:	ctrl_target_->recv(p);
+./adc/sa.cc:171:	ctrl_target_->recv(p);
+./adc/sa.cc:189:		ctrl_target_->recv(p);
+./adc/sa.cc:269:        target_->recv(p);
+./adc/sa.cc:289:                target_->recv(p);
+./adc/sa.cc:296:        	target_->recv(p);
+./doc/kannan/slides.tex:141:  to their \code{target_}
+./doc/links.tex:194:either the packet is delivered to the \code{target_} neighbor, or it
+./doc/links.tex:195:is sent to he \code{drop-target_}.
+./doc/queue_mgmt.tex:119:                                target_->recv(p, &qh_);
+./doc/queue_mgmt.tex:127:                        target_->recv(p, &qh_);
+./doc/figures/dsdv.fig:106:4 0 0 12 0 0 0 0.000 4 10 54 429 459 uptarget_
+./doc/figures/dsdv.fig:107:4 0 0 12 0 0 0 0.000 4 10 54 394 594 uptarget_
+./doc/figures/dsdv.fig:110:4 0 0 12 0 0 0 0.000 4 10 54 384 504 uptarget_
+./doc/figures/dsdv.fig:111:4 0 0 12 0 0 0 0.000 4 11 66 289 504 downtarget_
+./doc/figures/dsdv.fig:112:4 0 0 12 0 0 0 0.000 4 11 66 289 404 downtarget_
+./doc/figures/dsdv.fig:113:4 0 0 12 0 0 0 0.000 4 11 66 289 304 downtarget_
+./doc/figures/dsdv.fig:114:4 0 0 12 0 0 0 0.000 4 10 54 259 254 uptarget_
+./doc/figures/dsdv.fig:120:4 0 0 12 0 0 0 0.000 4 11 84 179 174 defaulttarget_
+./doc/figures/dsdv.fig:126:4 0 0 12 0 0 0 0.000 4 10 42 374 214 target_
+./doc/figures/dsdv.eps:180:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/dsdv.eps:183:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/dsdv.eps:192:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/dsdv.eps:195:gs 1 -1 scale (downtarget_) col0 show gr
+./doc/figures/dsdv.eps:198:gs 1 -1 scale (downtarget_) col0 show gr
+./doc/figures/dsdv.eps:201:gs 1 -1 scale (downtarget_) col0 show gr
+./doc/figures/dsdv.eps:204:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/dsdv.eps:222:gs 1 -1 scale (defaulttarget_) col0 show gr
+./doc/figures/dsdv.eps:240:gs 1 -1 scale (target_) col0 show gr
+./doc/figures/dsr.eps:172:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/dsr.eps:175:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/dsr.eps:184:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/dsr.eps:187:gs 1 -1 scale (downtarget_) col0 show gr
+./doc/figures/dsr.eps:190:gs 1 -1 scale (downtarget_) col0 show gr
+./doc/figures/dsr.eps:193:gs 1 -1 scale (downtarget_) col0 show gr
+./doc/figures/dsr.eps:196:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/dsr.eps:199:gs 1 -1 scale (target_) col0 show gr
+./doc/figures/basestation.eps:201:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/basestation.eps:204:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/basestation.eps:213:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/basestation.eps:216:gs 1 -1 scale (downtarget_) col0 show gr
+./doc/figures/basestation.eps:219:gs 1 -1 scale (downtarget_) col0 show gr
+./doc/figures/basestation.eps:222:gs 1 -1 scale (downtarget_) col0 show gr
+./doc/figures/basestation.eps:225:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/basestation.eps:261:gs 1 -1 scale (target_) col0 show gr
+./doc/figures/basestation.eps:264:gs 1 -1 scale (defaulttarget_) col0 show gr
+./doc/figures/wireless-mip.eps:155:gs 1 -1 scale (target_) col0 show gr
+./doc/figures/wireless-mip.eps:182:gs 1 -1 scale (uptarget_) col0 show gr
+./doc/figures/wireless-mip.eps:185:gs 1 -1 scale (defaulttarget_) col0 show gr
+./doc/figures/wireless-mip.eps:191:gs 1 -1 scale (target_) col0 show gr
+./doc/figures/wireless-mip.eps:194:gs 1 -1 scale (target_) col0 show gr
+./doc/figures/wireless-mip.eps:206:gs 1 -1 scale (target_) col0 show gr
+./doc/figures/wireless-mip.eps:227:gs 1 -1 scale (downtarget_) col0 show gr
+./doc/figures/sat-node.fig:82:4 0 0 0 0 0 20 0.0000 4 285 1680 2700 2625 defaulttarget_\001
+./doc/figures/dsr.fig:97:4 0 0 12 0 0 0 0.000 4 10 54 429 459 uptarget_
+./doc/figures/dsr.fig:98:4 0 0 12 0 0 0 0.000 4 10 54 394 594 uptarget_
+./doc/figures/dsr.fig:101:4 0 0 12 0 0 0 0.000 4 10 54 384 504 uptarget_
+./doc/figures/dsr.fig:102:4 0 0 12 0 0 0 0.000 4 11 66 289 504 downtarget_
+./doc/figures/dsr.fig:103:4 0 0 12 0 0 0 0.000 4 11 66 289 404 downtarget_
+./doc/figures/dsr.fig:104:4 0 0 12 0 0 0 0.000 4 11 66 289 304 downtarget_
+./doc/figures/dsr.fig:105:4 0 0 12 0 0 0 0.000 4 10 54 259 254 uptarget_
+./doc/figures/dsr.fig:106:4 0 0 12 0 0 0 0.000 4 10 42 169 174 target_
+./doc/figures/wireless-mip.fig:93:4 0 0 12 0 0 0 0.000 4 10 42 59 19 target_
+./doc/figures/wireless-mip.fig:102:4 0 0 12 0 0 0 0.000 4 10 54 199 374 uptarget_
+./doc/figures/wireless-mip.fig:103:4 0 0 12 0 0 0 0.000 4 11 84 219 294 defaulttarget_
+./doc/figures/wireless-mip.fig:105:4 0 0 12 0 0 0 0.000 4 10 42 39 49 target_
+./doc/figures/wireless-mip.fig:106:4 0 0 12 0 0 0 0.000 4 10 42 404 324 target_
+./doc/figures/wireless-mip.fig:110:4 0 0 12 0 0 0 0.000 4 10 42 524 199 target_
+./doc/figures/wireless-mip.fig:117:4 0 0 12 0 0 0 0.000 4 11 66 324 434 downtarget_
+./doc/figures/basestation.fig:124:4 0 0 12 0 0 0 0.000 4 10 54 429 459 uptarget_
+./doc/figures/basestation.fig:125:4 0 0 12 0 0 0 0.000 4 10 54 394 594 uptarget_
+./doc/figures/basestation.fig:128:4 0 0 12 0 0 0 0.000 4 10 54 384 504 uptarget_
+./doc/figures/basestation.fig:129:4 0 0 12 0 0 0 0.000 4 11 66 289 504 downtarget_
+./doc/figures/basestation.fig:130:4 0 0 12 0 0 0 0.000 4 11 66 289 404 downtarget_
+./doc/figures/basestation.fig:131:4 0 0 12 0 0 0 0.000 4 11 66 289 304 downtarget_
+./doc/figures/basestation.fig:132:4 0 0 12 0 0 0 0.000 4 10 54 259 254 uptarget_
+./doc/figures/basestation.fig:144:4 0 0 12 0 0 0 0.000 4 10 42 374 214 target_
+./doc/figures/basestation.fig:145:4 0 0 12 0 0 0 0.000 4 11 84 184 204 defaulttarget_
+./doc/figures/sat-node.eps:316:gs 1 -1 sc (defaulttarget_) col0 sh gr
+./doc/lan.tex:397:   	   inline NsObject* sendtarget() { return sendtarget_; }
+./doc/lan.tex:398:   	   inline NsObject* recvtarget() { return recvtarget_; }
+./doc/lan.tex:408:   	   NsObject* sendtarget_;		// for outgoing packet 
+./doc/lan.tex:409:   	   NsObject* recvtarget_;		// for incoming packet
+./doc/Makefile:8:WEB_TARGET_DIR = /nfs/web/isi.edu/htdocs/division7/nsnam/ns/doc
+./doc/Makefile:104:	cp everything.ps.gz  $(WEB_TARGET_DIR)/ns_doc.ps.gz
+./doc/Makefile:105:	cp everything.pdf $(WEB_TARGET_DIR)/ns_doc.pdf
+./doc/Makefile:106:	cp $(L2H_WORKING_DIR)/everything/*.{html,css} $(WEB_TARGET_DIR)
+./doc/Makefile:107:	cp $(L2H_WORKING_DIR)/everything/*.png $(WEB_TARGET_DIR)
+./doc/trace.tex:331:                if (target_ == 0)
+./doc/delays.tex:67:                        s.schedule(target_, p, txt + delay_);
+./doc/kfall/trace.tex:329:                if (target_ == 0)
+./doc/kfall/delays.tex:59:        		s.schedule(target_, p, txt + delay_);
+./doc/kfall/packet_format.tex:83:		target_->recv(p, 0);
+./doc/webcache.tex:92:                Process() : target_(0) \{\}
+./doc/webcache.tex:93:                inline Process*& target() \{ return target_; \}
+./doc/webcache.tex:99:                Process* target_;
+./doc/packet_format.tex:88:                target_->recv(p, 0);
+./wpan/p802_15_4phy.cc:262:		uptarget_->recv(psdu, (Handler*) 0);
+./wpan/wpan_zbr/wpan/update/ns-2.27/trace/cmu-trace.cc:1229:	if(target_ == 0)
+./wpan/wpan_zbr/wpan/cpp/p802_15_4phy.cc:252:		uptarget_->recv(psdu, (Handler*) 0);
+./wpan/wpan_zbr/wpan/cpp/p802_15_4mac.h:713:	NsObject *logtarget_;
+./wpan/wpan_zbr/wpan/cpp/p802_15_4mac.cc:642:		uptarget_->recv(msdu,(Handler*) 0);
+./wpan/wpan_zbr/wpan/cpp/p802_15_4mac.cc:2559:	downtarget_->recv(p, h);
+./wpan/wpan_zbr/wpan/cpp/p802_15_4mac.cc:5110:	logtarget_->recv(p, (Handler*) 0);
+./wpan/wpan_zbr/wpan/cpp/p802_15_4mac.cc:5134:			logtarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./wpan/wpan_zbr/wpan/cpp/p802_15_4mac.cc:5135:			if(logtarget_ == 0)
+./wpan/wpan_zbr/wpan/trace/cmu-trace.cc:1081:	if(target_ == 0)
+./wpan/p802_15_4mac.h:717:	NsObject *logtarget_;
+./wpan/p802_15_4mac.cc:643:		uptarget_->recv(msdu,(Handler*) 0);
+./wpan/p802_15_4mac.cc:2675:	downtarget_->recv(p, h);
+./wpan/p802_15_4mac.cc:5284:	logtarget_->recv(p, (Handler*) 0);
+./wpan/p802_15_4mac.cc:5308:			logtarget_ = (NsObject*) TclObject::lookup(argv[2]);
+./wpan/p802_15_4mac.cc:5309:			if(logtarget_ == 0)
+./config.status:680:S["target_os"]="linux-gnu"
+./config.status:681:S["target_vendor"]="unknown"
+./config.status:682:S["target_cpu"]="x86_64"
+./config.status:702:S["target_alias"]=""
+./classifier/classifier.cc:57:	default_target_ = 0;
+./classifier/classifier.cc:166:		if (default_target_) 
+./classifier/classifier.cc:167:			return default_target_;
+./classifier/classifier.cc:196:                        if (default_target_ != 0)
+./classifier/classifier.cc:197:                                tcl.result(default_target_->name());
+./classifier/classifier.cc:273:			default_target_=(NsObject*)TclObject::lookup(argv[2]);
+./classifier/classifier.cc:274:			if (default_target_ == 0)
+./classifier/filter.cc:63:Filter::Filter() : filter_target_(0) 
+./classifier/filter.cc:78:		if (filter_target_)
+./classifier/filter.cc:79:			filter_target_->recv(p->copy(), h);
+./classifier/filter.cc:85:		if (filter_target_)
+./classifier/filter.cc:86:			filter_target_->recv(p, h);
+./classifier/filter.cc:95:			if (filter_target_ != 0)
+./classifier/filter.cc:96:				tcl.result(target_->name());
+./classifier/filter.cc:102:			filter_target_ = (NsObject*)TclObject::lookup(argv[2]);
+./classifier/filter.cc:167:			if (filter_target_ != 0)
+./classifier/filter.cc:168:				tcl.result(target_->name());
+./classifier/filter.cc:174:			filter_target_ = (NsObject*)TclObject::lookup(argv[2]);
+./classifier/classifier-virtual.cc:65:	NsObject* target_;
+./classifier/classifier-virtual.cc:82:		 * then we use a hash next_hop -> target_object
+./classifier/classifier-virtual.cc:89:		target_= 0;
+./classifier/classifier-virtual.cc:101:			Tcl_SetHashValue(ep, target_= (NsObject*)tcl.lookup(tcl.result()));
+./classifier/classifier-virtual.cc:103:			target_= (NsObject*)Tcl_GetHashValue(ep);
+./classifier/classifier-virtual.cc:106:		if (!target_) {
+./classifier/classifier-virtual.cc:114:		target_->recv(p,h);
+./classifier/classifier-addr.cc:120:		if (default_target_) 
+./classifier/classifier-addr.cc:121:			return default_target_;
+Binary file ./classifier/classifier-hash.o matches
+./classifier/classifier.h:57:		default_target_ = obj;
+./classifier/classifier.h:88:	NsObject *default_target_;
+./classifier/classifier-hash.cc:110:                                tcl.evalf("%u set target_rate_ %s",
+./classifier/filter.h:59:	inline NsObject* filter_target() { return filter_target_; }
+./classifier/filter.h:67:	NsObject* filter_target_; // target for the matching packets
